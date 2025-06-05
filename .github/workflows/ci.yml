@@ -26,6 +26,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Install OpenSSL 1.0 libraries
+        run: sudo apt-get update && sudo apt-get install -y libssl1.0-dev || true
+
       - name: Checkout code
         uses: actions/checkout@v4
 

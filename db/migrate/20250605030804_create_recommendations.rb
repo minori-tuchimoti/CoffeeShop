@@ -1,7 +1,6 @@
 class CreateRecommendations < ActiveRecord::Migration[7.2]
   def change
     create_table :recommendations do |t|
-
       # このおすすめを投稿したユーザーとの関連
       t.references :user, null: false, foreign_key: true
 

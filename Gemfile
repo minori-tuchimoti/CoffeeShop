@@ -60,3 +60,5 @@ group :test do
 end
 
 gem 'devise'
+
+gem 'rubyzip', '~> 2.3'

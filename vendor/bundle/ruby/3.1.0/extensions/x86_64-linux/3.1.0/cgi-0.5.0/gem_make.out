@@ -1,0 +1,18 @@
+current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.1.0/gems/cgi-0.5.0/ext/cgi/escape
+/home/ec2-user/.rbenv/versions/3.1.2/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.1.0/gems/cgi-0.5.0/ext/cgi/escape
+make DESTDIR\= sitearchdir\=./.gem.20250605-24614-lwt0qq sitelibdir\=./.gem.20250605-24614-lwt0qq clean
+
+current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.1.0/gems/cgi-0.5.0/ext/cgi/escape
+make DESTDIR\= sitearchdir\=./.gem.20250605-24614-lwt0qq sitelibdir\=./.gem.20250605-24614-lwt0qq
+compiling escape.c
+linking shared-object cgi/escape.so
+
+current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.1.0/gems/cgi-0.5.0/ext/cgi/escape
+make DESTDIR\= sitearchdir\=./.gem.20250605-24614-lwt0qq sitelibdir\=./.gem.20250605-24614-lwt0qq install
+/usr/bin/install -c -m 0755 escape.so ./.gem.20250605-24614-lwt0qq/cgi
+
+current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.1.0/gems/cgi-0.5.0/ext/cgi/escape
+make DESTDIR\= sitearchdir\=./.gem.20250605-24614-lwt0qq sitelibdir\=./.gem.20250605-24614-lwt0qq clean

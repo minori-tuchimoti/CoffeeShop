@@ -79,16 +79,23 @@ jobs:
             sudo apt-get update
             sudo apt-get install --no-install-recommends -y \
               google-chrome-stable curl libjemalloc2 libvips sqlite3 \
-              libssl1.1 || true
 
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Remove prebuilt native extensions
+        run: rm -rf vendor/bundle
+
+      - name: Install OpenSSL libraries
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libssl1.1 || sudo apt-get install -y libssl3
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: .ruby-version
-          bundler-cache: true
+          bundler-cache: false
 
       - name: Force Ruby platform for gems
         run: bundle config set force_ruby_platform true

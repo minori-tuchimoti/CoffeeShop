@@ -138,7 +138,7 @@ checked program was:
 have_func: checking for _lzcnt_u32() in x86intrin.h... -------------------- no
 
 LD_LIBRARY_PATH=.:/home/ec2-user/.rbenv/versions/3.2.2/lib "gcc -o conftest -I/home/ec2-user/.rbenv/versions/3.2.2/include/ruby-3.2.0/x86_64-linux -I/home/ec2-user/.rbenv/versions/3.2.2/include/ruby-3.2.0/ruby/backward -I/home/ec2-user/.rbenv/versions/3.2.2/include/ruby-3.2.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdiv-by-zero -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wold-style-definition -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC conftest.c  -L. -L/home/ec2-user/.rbenv/versions/3.2.2/lib -Wl,-rpath,/home/ec2-user/.rbenv/versions/3.2.2/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/ec2-user/.rbenv/versions/3.2.2/lib -L/home/ec2-user/.rbenv/versions/3.2.2/lib -lruby  -lm -lpthread  -lc"
-/tmp/cclCY5kN.o: In function `t':
+/tmp/ccvVZ3u4.o: In function `t':
 /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/bigdecimal-3.2.2/ext/bigdecimal/conftest.c:16: undefined reference to `_lzcnt_u32'
 collect2: error: ld returned 1 exit status
 checked program was:
@@ -201,7 +201,7 @@ checked program was:
 have_func: checking for _lzcnt_u64() in x86intrin.h... -------------------- no
 
 LD_LIBRARY_PATH=.:/home/ec2-user/.rbenv/versions/3.2.2/lib "gcc -o conftest -I/home/ec2-user/.rbenv/versions/3.2.2/include/ruby-3.2.0/x86_64-linux -I/home/ec2-user/.rbenv/versions/3.2.2/include/ruby-3.2.0/ruby/backward -I/home/ec2-user/.rbenv/versions/3.2.2/include/ruby-3.2.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdiv-by-zero -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wold-style-definition -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC conftest.c  -L. -L/home/ec2-user/.rbenv/versions/3.2.2/lib -Wl,-rpath,/home/ec2-user/.rbenv/versions/3.2.2/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/ec2-user/.rbenv/versions/3.2.2/lib -L/home/ec2-user/.rbenv/versions/3.2.2/lib -lruby  -lm -lpthread  -lc"
-/tmp/ccRwdsyo.o: In function `t':
+/tmp/cc1ezNXe.o: In function `t':
 /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/bigdecimal-3.2.2/ext/bigdecimal/conftest.c:16: undefined reference to `_lzcnt_u64'
 collect2: error: ld returned 1 exit status
 checked program was:
@@ -399,7 +399,7 @@ cc1: warning: unrecognized command line option ‘-Wno-self-assign’
 cc1: warning: unrecognized command line option ‘-Wno-parentheses-equality’
 cc1: warning: unrecognized command line option ‘-Wno-constant-logical-operand’
 cc1: warning: unrecognized command line option ‘-Wno-cast-function-type’
-/tmp/ccAF0Gxt.o: In function `t':
+/tmp/cc2REHcv.o: In function `t':
 /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/bigdecimal-3.2.2/ext/bigdecimal/conftest.c:17: undefined reference to `__builtin_isfinite'
 collect2: error: ld returned 1 exit status
 checked program was:

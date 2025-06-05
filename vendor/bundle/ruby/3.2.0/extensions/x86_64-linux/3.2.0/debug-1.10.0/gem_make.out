@@ -3,17 +3,17 @@ current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.
 creating Makefile
 
 current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/debug-1.10.0/ext/debug
-make DESTDIR\= sitearchdir\=./.gem.20250605-13127-2u7bih sitelibdir\=./.gem.20250605-13127-2u7bih clean
+make DESTDIR\= sitearchdir\=./.gem.20250605-15273-6tvqtl sitelibdir\=./.gem.20250605-15273-6tvqtl clean
 
 current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/debug-1.10.0/ext/debug
-make DESTDIR\= sitearchdir\=./.gem.20250605-13127-2u7bih sitelibdir\=./.gem.20250605-13127-2u7bih
+make DESTDIR\= sitearchdir\=./.gem.20250605-15273-6tvqtl sitelibdir\=./.gem.20250605-15273-6tvqtl
 compiling debug.c
 compiling iseq_collector.c
 linking shared-object debug/debug.so
 
 current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/debug-1.10.0/ext/debug
-make DESTDIR\= sitearchdir\=./.gem.20250605-13127-2u7bih sitelibdir\=./.gem.20250605-13127-2u7bih install
-/usr/bin/install -c -m 0755 debug.so ./.gem.20250605-13127-2u7bih/debug
+make DESTDIR\= sitearchdir\=./.gem.20250605-15273-6tvqtl sitelibdir\=./.gem.20250605-15273-6tvqtl install
+/usr/bin/install -c -m 0755 debug.so ./.gem.20250605-15273-6tvqtl/debug
 
 current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/debug-1.10.0/ext/debug
-make DESTDIR\= sitearchdir\=./.gem.20250605-13127-2u7bih sitelibdir\=./.gem.20250605-13127-2u7bih clean
+make DESTDIR\= sitearchdir\=./.gem.20250605-15273-6tvqtl sitelibdir\=./.gem.20250605-15273-6tvqtl clean

@@ -3,10 +3,10 @@ current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.
 creating Makefile
 
 current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/websocket-driver-0.8.0/ext/websocket-driver
-make DESTDIR\= sitearchdir\=./.gem.20250605-13127-ivnjvv sitelibdir\=./.gem.20250605-13127-ivnjvv clean
+make DESTDIR\= sitearchdir\=./.gem.20250605-15273-9hutd3 sitelibdir\=./.gem.20250605-15273-9hutd3 clean
 
 current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/websocket-driver-0.8.0/ext/websocket-driver
-make DESTDIR\= sitearchdir\=./.gem.20250605-13127-ivnjvv sitelibdir\=./.gem.20250605-13127-ivnjvv
+make DESTDIR\= sitearchdir\=./.gem.20250605-15273-9hutd3 sitelibdir\=./.gem.20250605-15273-9hutd3
 compiling websocket_mask.c
 websocket_mask.c: In function ‘Init_websocket_mask’:
 websocket_mask.c:26:6: warning: old-style function definition [-Wold-style-definition]
@@ -20,8 +20,8 @@ cc1: warning: unrecognized command line option ‘-Wno-cast-function-type’
 linking shared-object websocket_mask.so
 
 current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/websocket-driver-0.8.0/ext/websocket-driver
-make DESTDIR\= sitearchdir\=./.gem.20250605-13127-ivnjvv sitelibdir\=./.gem.20250605-13127-ivnjvv install
-/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20250605-13127-ivnjvv
+make DESTDIR\= sitearchdir\=./.gem.20250605-15273-9hutd3 sitelibdir\=./.gem.20250605-15273-9hutd3 install
+/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20250605-15273-9hutd3
 
 current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/websocket-driver-0.8.0/ext/websocket-driver
-make DESTDIR\= sitearchdir\=./.gem.20250605-13127-ivnjvv sitelibdir\=./.gem.20250605-13127-ivnjvv clean
+make DESTDIR\= sitearchdir\=./.gem.20250605-15273-9hutd3 sitelibdir\=./.gem.20250605-15273-9hutd3 clean

@@ -6,10 +6,10 @@ checking for whether -fvisibility=hidden is accepted as CFLAGS... yes
 creating Makefile
 
 current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/prism-1.4.0/ext/prism
-make DESTDIR\= sitearchdir\=./.gem.20250605-13127-nig9bd sitelibdir\=./.gem.20250605-13127-nig9bd clean
+make DESTDIR\= sitearchdir\=./.gem.20250605-15273-m9glfe sitelibdir\=./.gem.20250605-15273-m9glfe clean
 
 current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/prism-1.4.0/ext/prism
-make DESTDIR\= sitearchdir\=./.gem.20250605-13127-nig9bd sitelibdir\=./.gem.20250605-13127-nig9bd
+make DESTDIR\= sitearchdir\=./.gem.20250605-15273-m9glfe sitelibdir\=./.gem.20250605-15273-m9glfe
 compiling api_node.c
 compiling api_pack.c
 compiling extension.c
@@ -37,8 +37,8 @@ compiling ./../../src/util/pm_strpbrk.c
 linking shared-object prism/prism.so
 
 current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/prism-1.4.0/ext/prism
-make DESTDIR\= sitearchdir\=./.gem.20250605-13127-nig9bd sitelibdir\=./.gem.20250605-13127-nig9bd install
-/usr/bin/install -c -m 0755 prism.so ./.gem.20250605-13127-nig9bd/prism
+make DESTDIR\= sitearchdir\=./.gem.20250605-15273-m9glfe sitelibdir\=./.gem.20250605-15273-m9glfe install
+/usr/bin/install -c -m 0755 prism.so ./.gem.20250605-15273-m9glfe/prism
 
 current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/prism-1.4.0/ext/prism
-make DESTDIR\= sitearchdir\=./.gem.20250605-13127-nig9bd sitelibdir\=./.gem.20250605-13127-nig9bd clean
+make DESTDIR\= sitearchdir\=./.gem.20250605-15273-m9glfe sitelibdir\=./.gem.20250605-15273-m9glfe clean

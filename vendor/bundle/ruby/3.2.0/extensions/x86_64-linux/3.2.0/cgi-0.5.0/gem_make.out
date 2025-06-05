@@ -3,16 +3,16 @@ current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.
 creating Makefile
 
 current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/cgi-0.5.0/ext/cgi/escape
-make DESTDIR\= sitearchdir\=./.gem.20250605-13127-xn63m0 sitelibdir\=./.gem.20250605-13127-xn63m0 clean
+make DESTDIR\= sitearchdir\=./.gem.20250605-15273-96tiph sitelibdir\=./.gem.20250605-15273-96tiph clean
 
 current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/cgi-0.5.0/ext/cgi/escape
-make DESTDIR\= sitearchdir\=./.gem.20250605-13127-xn63m0 sitelibdir\=./.gem.20250605-13127-xn63m0
+make DESTDIR\= sitearchdir\=./.gem.20250605-15273-96tiph sitelibdir\=./.gem.20250605-15273-96tiph
 compiling escape.c
 linking shared-object cgi/escape.so
 
 current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/cgi-0.5.0/ext/cgi/escape
-make DESTDIR\= sitearchdir\=./.gem.20250605-13127-xn63m0 sitelibdir\=./.gem.20250605-13127-xn63m0 install
-/usr/bin/install -c -m 0755 escape.so ./.gem.20250605-13127-xn63m0/cgi
+make DESTDIR\= sitearchdir\=./.gem.20250605-15273-96tiph sitelibdir\=./.gem.20250605-15273-96tiph install
+/usr/bin/install -c -m 0755 escape.so ./.gem.20250605-15273-96tiph/cgi
 
 current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/cgi-0.5.0/ext/cgi/escape
-make DESTDIR\= sitearchdir\=./.gem.20250605-13127-xn63m0 sitelibdir\=./.gem.20250605-13127-xn63m0 clean
+make DESTDIR\= sitearchdir\=./.gem.20250605-15273-96tiph sitelibdir\=./.gem.20250605-15273-96tiph clean

@@ -26,10 +26,10 @@ checking for Random.bytes... yes
 creating Makefile
 
 current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/puma-6.6.0/ext/puma_http11
-make DESTDIR\= sitearchdir\=./.gem.20250605-13127-r3spes sitelibdir\=./.gem.20250605-13127-r3spes clean
+make DESTDIR\= sitearchdir\=./.gem.20250605-15273-369gby sitelibdir\=./.gem.20250605-15273-369gby clean
 
 current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/puma-6.6.0/ext/puma_http11
-make DESTDIR\= sitearchdir\=./.gem.20250605-13127-r3spes sitelibdir\=./.gem.20250605-13127-r3spes
+make DESTDIR\= sitearchdir\=./.gem.20250605-15273-369gby sitelibdir\=./.gem.20250605-15273-369gby
 compiling http11_parser.c
 compiling mini_ssl.c
 mini_ssl.c: In function ‘sslctx_initialize’:
@@ -48,8 +48,8 @@ compiling puma_http11.c
 linking shared-object puma/puma_http11.so
 
 current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/puma-6.6.0/ext/puma_http11
-make DESTDIR\= sitearchdir\=./.gem.20250605-13127-r3spes sitelibdir\=./.gem.20250605-13127-r3spes install
-/usr/bin/install -c -m 0755 puma_http11.so ./.gem.20250605-13127-r3spes/puma
+make DESTDIR\= sitearchdir\=./.gem.20250605-15273-369gby sitelibdir\=./.gem.20250605-15273-369gby install
+/usr/bin/install -c -m 0755 puma_http11.so ./.gem.20250605-15273-369gby/puma
 
 current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/puma-6.6.0/ext/puma_http11
-make DESTDIR\= sitearchdir\=./.gem.20250605-13127-r3spes sitelibdir\=./.gem.20250605-13127-r3spes clean
+make DESTDIR\= sitearchdir\=./.gem.20250605-15273-369gby sitelibdir\=./.gem.20250605-15273-369gby clean

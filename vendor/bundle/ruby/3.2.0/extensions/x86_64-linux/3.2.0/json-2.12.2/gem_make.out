@@ -8,16 +8,16 @@ checking for whether -std=c99 is accepted as CFLAGS... yes
 creating Makefile
 
 current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/json-2.12.2/ext/json/ext/parser
-make DESTDIR\= sitearchdir\=./.gem.20250605-13127-d0qe6u sitelibdir\=./.gem.20250605-13127-d0qe6u clean
+make DESTDIR\= sitearchdir\=./.gem.20250605-15273-khpko8 sitelibdir\=./.gem.20250605-15273-khpko8 clean
 
 current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/json-2.12.2/ext/json/ext/parser
-make DESTDIR\= sitearchdir\=./.gem.20250605-13127-d0qe6u sitelibdir\=./.gem.20250605-13127-d0qe6u
+make DESTDIR\= sitearchdir\=./.gem.20250605-15273-khpko8 sitelibdir\=./.gem.20250605-15273-khpko8
 compiling parser.c
 linking shared-object json/ext/parser.so
 
 current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/json-2.12.2/ext/json/ext/parser
-make DESTDIR\= sitearchdir\=./.gem.20250605-13127-d0qe6u sitelibdir\=./.gem.20250605-13127-d0qe6u install
-/usr/bin/install -c -m 0755 parser.so ./.gem.20250605-13127-d0qe6u/json/ext
+make DESTDIR\= sitearchdir\=./.gem.20250605-15273-khpko8 sitelibdir\=./.gem.20250605-15273-khpko8 install
+/usr/bin/install -c -m 0755 parser.so ./.gem.20250605-15273-khpko8/json/ext
 
 current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/json-2.12.2/ext/json/ext/parser
-make DESTDIR\= sitearchdir\=./.gem.20250605-13127-d0qe6u sitelibdir\=./.gem.20250605-13127-d0qe6u clean
+make DESTDIR\= sitearchdir\=./.gem.20250605-15273-khpko8 sitelibdir\=./.gem.20250605-15273-khpko8 clean

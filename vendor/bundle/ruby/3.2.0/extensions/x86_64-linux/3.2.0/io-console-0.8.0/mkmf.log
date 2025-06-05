@@ -98,7 +98,7 @@ checked program was:
 /* end */
 
 LD_LIBRARY_PATH=.:/home/ec2-user/.rbenv/versions/3.2.2/lib "gcc -o conftest -I/home/ec2-user/.rbenv/versions/3.2.2/include/ruby-3.2.0/x86_64-linux -I/home/ec2-user/.rbenv/versions/3.2.2/include/ruby-3.2.0/ruby/backward -I/home/ec2-user/.rbenv/versions/3.2.2/include/ruby-3.2.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdiv-by-zero -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wold-style-definition -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC conftest.c  -L. -L/home/ec2-user/.rbenv/versions/3.2.2/lib -Wl,-rpath,/home/ec2-user/.rbenv/versions/3.2.2/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/ec2-user/.rbenv/versions/3.2.2/lib -L/home/ec2-user/.rbenv/versions/3.2.2/lib -lruby  -lm -lpthread  -lc"
-/tmp/ccoG75fr.o: In function `t':
+/tmp/ccka0V3U.o: In function `t':
 /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/io-console-0.8.0/ext/io/console/conftest.c:15: undefined reference to `rb_io_path'
 collect2: error: ld returned 1 exit status
 checked program was:
@@ -263,7 +263,7 @@ checked program was:
 /* end */
 
 LD_LIBRARY_PATH=.:/home/ec2-user/.rbenv/versions/3.2.2/lib "gcc -o conftest -I/home/ec2-user/.rbenv/versions/3.2.2/include/ruby-3.2.0/x86_64-linux -I/home/ec2-user/.rbenv/versions/3.2.2/include/ruby-3.2.0/ruby/backward -I/home/ec2-user/.rbenv/versions/3.2.2/include/ruby-3.2.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdiv-by-zero -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wold-style-definition -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC conftest.c  -L. -L/home/ec2-user/.rbenv/versions/3.2.2/lib -Wl,-rpath,/home/ec2-user/.rbenv/versions/3.2.2/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/ec2-user/.rbenv/versions/3.2.2/lib -L/home/ec2-user/.rbenv/versions/3.2.2/lib -lruby  -lm -lpthread  -lc"
-/tmp/ccukXmJ0.o: In function `t':
+/tmp/ccPPsRTu.o: In function `t':
 /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/io-console-0.8.0/ext/io/console/conftest.c:15: undefined reference to `rb_io_closed_p'
 collect2: error: ld returned 1 exit status
 checked program was:
@@ -320,7 +320,7 @@ checked program was:
 /* end */
 
 LD_LIBRARY_PATH=.:/home/ec2-user/.rbenv/versions/3.2.2/lib "gcc -o conftest -I/home/ec2-user/.rbenv/versions/3.2.2/include/ruby-3.2.0/x86_64-linux -I/home/ec2-user/.rbenv/versions/3.2.2/include/ruby-3.2.0/ruby/backward -I/home/ec2-user/.rbenv/versions/3.2.2/include/ruby-3.2.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdiv-by-zero -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wold-style-definition -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC conftest.c  -L. -L/home/ec2-user/.rbenv/versions/3.2.2/lib -Wl,-rpath,/home/ec2-user/.rbenv/versions/3.2.2/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/ec2-user/.rbenv/versions/3.2.2/lib -L/home/ec2-user/.rbenv/versions/3.2.2/lib -lruby  -lm -lpthread  -lc"
-/tmp/cc6T10rc.o: In function `t':
+/tmp/ccVB9ckG.o: In function `t':
 /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/io-console-0.8.0/ext/io/console/conftest.c:15: undefined reference to `rb_io_open_descriptor'
 collect2: error: ld returned 1 exit status
 checked program was:

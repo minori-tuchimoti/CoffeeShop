@@ -389,7 +389,7 @@ configure:13646: $? = 0
 configure:13646: result: yes
 configure:13652: checking for fullfsync
 configure:13652: gcc -o conftest -fPIC -O2 -fvisibility=hidden -DSQLITE_DEFAULT_WAL_SYNCHRONOUS=1   conftest.c  >&5
-/tmp/cckoYqqx.o: In function `main':
+/tmp/ccLE6VvU.o: In function `main':
 conftest.c:(.text.startup+0x7): undefined reference to `fullfsync'
 collect2: error: ld returned 1 exit status
 configure:13652: $? = 1
@@ -633,7 +633,7 @@ configure:13938: $? = 0
 configure:13938: result: yes
 configure:13945: checking for library containing tgetent
 configure:13975: gcc -o conftest -fPIC -O2 -fvisibility=hidden -DSQLITE_DEFAULT_WAL_SYNCHRONOUS=1   conftest.c  >&5
-/tmp/ccD1KxmR.o: In function `main':
+/tmp/ccxNo6Bf.o: In function `main':
 conftest.c:(.text.startup+0x7): undefined reference to `tgetent'
 collect2: error: ld returned 1 exit status
 configure:13975: $? = 1
@@ -684,7 +684,7 @@ configure:13975: $? = 0
 configure:13995: result: -ltermcap
 configure:14004: checking for library containing readline
 configure:14034: gcc -o conftest -fPIC -O2 -fvisibility=hidden -DSQLITE_DEFAULT_WAL_SYNCHRONOUS=1   conftest.c -ltermcap  >&5
-/tmp/ccUucdXO.o: In function `main':
+/tmp/ccljth6i.o: In function `main':
 conftest.c:(.text.startup+0x7): undefined reference to `readline'
 collect2: error: ld returned 1 exit status
 configure:14034: $? = 1
@@ -735,7 +735,7 @@ configure:14034: $? = 0
 configure:14054: result: -lreadline
 configure:14094: checking for library containing pthread_create
 configure:14124: gcc -o conftest -fPIC -O2 -fvisibility=hidden -DSQLITE_DEFAULT_WAL_SYNCHRONOUS=1   conftest.c  >&5
-/tmp/ccw2veeS.o: In function `main':
+/tmp/ccWvLYLn.o: In function `main':
 conftest.c:(.text.startup+0x7): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
 configure:14124: $? = 1
@@ -791,7 +791,7 @@ configure:14183: $? = 0
 configure:14203: result: none required
 configure:14227: checking for library containing dlopen
 configure:14257: gcc -o conftest -fPIC -O2 -fvisibility=hidden -DSQLITE_DEFAULT_WAL_SYNCHRONOUS=1   conftest.c -lpthread  >&5
-/tmp/ccM1NBA3.o: In function `main':
+/tmp/ccKyupOy.o: In function `main':
 conftest.c:(.text.startup+0x7): undefined reference to `dlopen'
 collect2: error: ld returned 1 exit status
 configure:14257: $? = 1
@@ -850,7 +850,7 @@ configure:14342: gcc -o conftest -fPIC -O2 -fvisibility=hidden -DSQLITE_DEFAULT_
 conftest.c:35:6: warning: conflicting types for built-in function 'ceil' [-Wbuiltin-declaration-mismatch]
  char ceil ();
       ^~~~
-/tmp/ccQ7zHd7.o: In function `main':
+/tmp/ccIfPuwD.o: In function `main':
 conftest.c:(.text.startup+0x7): undefined reference to `ceil'
 collect2: error: ld returned 1 exit status
 configure:14342: $? = 1
@@ -932,7 +932,7 @@ configure:14597: $? = 0
 configure:14597: result: yes
 configure:14602: checking for library containing deflate
 configure:14632: gcc -o conftest -fPIC -O2 -fvisibility=hidden -DSQLITE_DEFAULT_WAL_SYNCHRONOUS=1   conftest.c -lm -ldl -lpthread  >&5
-/tmp/ccAOUUCq.o: In function `main':
+/tmp/ccYj2ufL.o: In function `main':
 conftest.c:(.text.startup+0x7): undefined reference to `deflate'
 collect2: error: ld returned 1 exit status
 configure:14632: $? = 1

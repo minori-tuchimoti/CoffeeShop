@@ -16,16 +16,16 @@ checking for ttyname_r()... yes
 creating Makefile
 
 current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/io-console-0.8.0/ext/io/console
-make DESTDIR\= sitearchdir\=./.gem.20250605-13127-x7c103 sitelibdir\=./.gem.20250605-13127-x7c103 clean
+make DESTDIR\= sitearchdir\=./.gem.20250605-15273-3zrg3r sitelibdir\=./.gem.20250605-15273-3zrg3r clean
 
 current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/io-console-0.8.0/ext/io/console
-make DESTDIR\= sitearchdir\=./.gem.20250605-13127-x7c103 sitelibdir\=./.gem.20250605-13127-x7c103
+make DESTDIR\= sitearchdir\=./.gem.20250605-15273-3zrg3r sitelibdir\=./.gem.20250605-15273-3zrg3r
 compiling console.c
 linking shared-object io/console.so
 
 current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/io-console-0.8.0/ext/io/console
-make DESTDIR\= sitearchdir\=./.gem.20250605-13127-x7c103 sitelibdir\=./.gem.20250605-13127-x7c103 install
-/usr/bin/install -c -m 0755 console.so ./.gem.20250605-13127-x7c103/io
+make DESTDIR\= sitearchdir\=./.gem.20250605-15273-3zrg3r sitelibdir\=./.gem.20250605-15273-3zrg3r install
+/usr/bin/install -c -m 0755 console.so ./.gem.20250605-15273-3zrg3r/io
 
 current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/io-console-0.8.0/ext/io/console
-make DESTDIR\= sitearchdir\=./.gem.20250605-13127-x7c103 sitelibdir\=./.gem.20250605-13127-x7c103 clean
+make DESTDIR\= sitearchdir\=./.gem.20250605-15273-3zrg3r sitelibdir\=./.gem.20250605-15273-3zrg3r clean

@@ -3,16 +3,16 @@ current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.
 creating Makefile
 
 current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/racc-1.8.1/ext/racc/cparse
-make DESTDIR\= sitearchdir\=./.gem.20250605-2311-82545s sitelibdir\=./.gem.20250605-2311-82545s clean
+make DESTDIR\= sitearchdir\=./.gem.20250605-15273-3twljm sitelibdir\=./.gem.20250605-15273-3twljm clean
 
 current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/racc-1.8.1/ext/racc/cparse
-make DESTDIR\= sitearchdir\=./.gem.20250605-2311-82545s sitelibdir\=./.gem.20250605-2311-82545s
+make DESTDIR\= sitearchdir\=./.gem.20250605-15273-3twljm sitelibdir\=./.gem.20250605-15273-3twljm
 compiling cparse.c
 linking shared-object racc/cparse.so
 
 current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/racc-1.8.1/ext/racc/cparse
-make DESTDIR\= sitearchdir\=./.gem.20250605-2311-82545s sitelibdir\=./.gem.20250605-2311-82545s install
-/usr/bin/install -c -m 0755 cparse.so ./.gem.20250605-2311-82545s/racc
+make DESTDIR\= sitearchdir\=./.gem.20250605-15273-3twljm sitelibdir\=./.gem.20250605-15273-3twljm install
+/usr/bin/install -c -m 0755 cparse.so ./.gem.20250605-15273-3twljm/racc
 
 current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/racc-1.8.1/ext/racc/cparse
-make DESTDIR\= sitearchdir\=./.gem.20250605-2311-82545s sitelibdir\=./.gem.20250605-2311-82545s clean
+make DESTDIR\= sitearchdir\=./.gem.20250605-15273-3twljm sitelibdir\=./.gem.20250605-15273-3twljm clean

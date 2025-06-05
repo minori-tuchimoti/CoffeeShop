@@ -13,10 +13,10 @@ checking for sys/resource.h... yes
 creating Makefile
 
 current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/nio4r-2.7.4/ext/nio4r
-make DESTDIR\= sitearchdir\=./.gem.20250605-13127-8cje5w sitelibdir\=./.gem.20250605-13127-8cje5w clean
+make DESTDIR\= sitearchdir\=./.gem.20250605-15273-l4qt3s sitelibdir\=./.gem.20250605-15273-l4qt3s clean
 
 current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/nio4r-2.7.4/ext/nio4r
-make DESTDIR\= sitearchdir\=./.gem.20250605-13127-8cje5w sitelibdir\=./.gem.20250605-13127-8cje5w
+make DESTDIR\= sitearchdir\=./.gem.20250605-15273-l4qt3s sitelibdir\=./.gem.20250605-15273-l4qt3s
 compiling bytebuffer.c
 bytebuffer.c: In function ‘Init_NIO_ByteBuffer’:
 bytebuffer.c:59:6: warning: old-style function definition [-Wold-style-definition]
@@ -272,8 +272,8 @@ compiling selector.c
 linking shared-object nio4r_ext.so
 
 current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/nio4r-2.7.4/ext/nio4r
-make DESTDIR\= sitearchdir\=./.gem.20250605-13127-8cje5w sitelibdir\=./.gem.20250605-13127-8cje5w install
-/usr/bin/install -c -m 0755 nio4r_ext.so ./.gem.20250605-13127-8cje5w
+make DESTDIR\= sitearchdir\=./.gem.20250605-15273-l4qt3s sitelibdir\=./.gem.20250605-15273-l4qt3s install
+/usr/bin/install -c -m 0755 nio4r_ext.so ./.gem.20250605-15273-l4qt3s
 
 current directory: /home/ec2-user/environment/Coffeeshop/vendor/bundle/ruby/3.2.0/gems/nio4r-2.7.4/ext/nio4r
-make DESTDIR\= sitearchdir\=./.gem.20250605-13127-8cje5w sitelibdir\=./.gem.20250605-13127-8cje5w clean
+make DESTDIR\= sitearchdir\=./.gem.20250605-15273-l4qt3s sitelibdir\=./.gem.20250605-15273-l4qt3s clean

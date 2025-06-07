@@ -2,10 +2,10 @@
 
 one:
   user: one
-  coffee: one
+  coffee_id: one
   reason: MyText
 
 two:
   user: two
-  coffee: two
+  coffee_id: two
   reason: MyText

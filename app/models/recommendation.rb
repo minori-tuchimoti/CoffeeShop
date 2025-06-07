@@ -1,4 +1,4 @@
 class Recommendation < ApplicationRecord
   belongs_to :user
-  belongs_to :coffeeshop
+  belongs_to :coffee
 end

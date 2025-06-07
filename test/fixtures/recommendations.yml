@@ -1,9 +1,9 @@
 one:
-  user: one       # users.ymlのoneを参照
-  coffee: one     # coffees.ymlのoneを参照
+  user_id: one
+  coffee_id: one
   reason: "Great taste"
 
 two:
-  user: two
-  coffee: two
+  user_id: two
+  coffee_id: two
   reason: "Nice aroma"

@@ -1,9 +1,9 @@
 one:
-  user: one       # users.ymlのoneを参照
-  recommendation: one   # recommendations.ymlのoneを参照
+  user: one    # user_id の代わりにラベル参照でOK
+  coffee: one  # coffee_id の代わりにラベル参照でOK
   content: "MyText"
 
 two:
   user: two
-  recommendation: two
+  coffee: two
   content: "MyText"

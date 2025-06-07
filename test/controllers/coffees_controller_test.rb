@@ -1,25 +1,25 @@
 require "test_helper"
 
-class CoffeeshopsControllerTest < ActionDispatch::IntegrationTest
+class CoffeesControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
-    get coffeeshops_url
+    get coffees_url
     assert_response :success
   end
 
   test "should get new" do
-    get new_coffeeshop_url
+    get new_coffee_url
     assert_response :success
   end
 
   test "should get show" do
-    coffeeshop = coffeeshops(:one)
-    get coffeeshop_url(coffeeshop)
+    coffee = coffees(:one)
+    get coffee_url(coffee)
     assert_response :success
   end
 
   test "should get edit" do
-    coffeeshop = coffeeshops(:one)
-    get edit_coffeeshop_url(coffeeshop)
+    coffee = coffees(:one)
+    get edit_coffee_url(coffee)
     assert_response :success
   end
 end

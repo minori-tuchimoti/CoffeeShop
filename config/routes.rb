@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
 
 
+
   get "homes/top"
   get "homes/about"
   get "recommendations/create"

@@ -1,6 +1,6 @@
 class CreateCoffeeshops < ActiveRecord::Migration[7.2]
   def change
-    create_table :coffeeshops do |t|
+    create_table :coffees do |t|
       t.string :name           # 喫茶店の名前
       t.text :description      # 喫茶店の説明（詳細情報など）
       t.string :address        # 喫茶店の住所

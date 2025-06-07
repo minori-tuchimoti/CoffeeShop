@@ -1,11 +1,10 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
+# comments.yml
 one:
   user: one
   coffee: one
-  content: MyText
+  content: "MyText"
 
 two:
   user: two
   coffee: two
-  content: MyText
+  content: "MyText"

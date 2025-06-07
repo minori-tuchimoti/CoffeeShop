@@ -5,7 +5,7 @@ class CreateRecommendations < ActiveRecord::Migration[7.2]
       t.references :user, null: false, foreign_key: true
 
       # おすすめされている喫茶店との関連
-      t.references :coffeeshop, null: false, foreign_key: true
+      t.references :coffee, null: false, foreign_key: true
 
       # おすすめ理由（ユーザーのコメントなど）
       t.text :reason

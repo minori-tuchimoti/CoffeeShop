@@ -1,13 +1,14 @@
 require "test_helper"
 
 class UsersControllerTest < ActionDispatch::IntegrationTest
-  test "should get show" do
-    get users_show_url
+  test "should get index" do
+    get users_url
     assert_response :success
   end
 
-  test "should get index" do
-    get users_index_url
+  test "should get show" do
+    user = users(:one)  # fixturesのユーザーを使う
+    get user_url(user)
     assert_response :success
   end
 end

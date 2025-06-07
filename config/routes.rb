@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root "homes#top" # トップページ
   get "about", to: "homes#about" # /about にアクセスできるようにする
+  resources :users
 
 
 

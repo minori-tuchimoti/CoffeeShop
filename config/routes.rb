@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root "homes#top" # トップページ
   get "about", to: "homes#about" # /about にアクセスできるようにする
   resources :users
+  resources :coffees
 
 
 
@@ -17,10 +18,6 @@ Rails.application.routes.draw do
   get "recommendations/destroy"
   get "comments/create"
   get "comments/destroy"
-  get "coffees/index"
-  get "coffees/show"
-  get "coffees/new"
-  get "coffees/edit"
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

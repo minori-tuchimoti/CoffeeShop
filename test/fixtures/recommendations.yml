@@ -1,11 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  user: one
-  coffee_id: one
-  reason: MyText
+  user_id: 1
+  coffee_id: 1
+  reason: "Great taste"
 
 two:
-  user: two
-  coffee_id: two
-  reason: MyText
+  user_id: 2
+  coffee_id: 2
+  reason: "Nice aroma"

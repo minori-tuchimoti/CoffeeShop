@@ -1,13 +1,17 @@
 class CoffeesController < ApplicationController
-  def index      # 日本地図上に喫茶店一覧をマッピング（Google MapsやMapboxを使う）
+  def index
+    @coffees = Coffee.all
   end
 
-  def show       # クリックされた喫茶店の詳細、コメント、評価などを表示
+  def show
+    @coffee = Coffee.find(params[:id])
   end
 
-  def new        # 管理者が喫茶店登録できる場合（任意）
+  def new
+    @coffee = Coffee.new
   end
 
   def edit
+    @coffee = Coffee.find(params[:id])
   end
 end

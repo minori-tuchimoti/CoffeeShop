@@ -1,5 +1,24 @@
 Rails.application.routes.draw do
   devise_for :users
+  root "homes#top" # トップページ
+  get "about", to: "homes#about" # /about にアクセスできるようにする
+
+
+
+
+
+
+  get "homes/top"
+  get "homes/about"
+  get "recommendations/create"
+  get "recommendations/destroy"
+  get "comments/create"
+  get "comments/destroy"
+  get "coffeeshops/index"
+  get "coffeeshops/show"
+  get "coffeeshops/new"
+  get "coffeeshops/edit"
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

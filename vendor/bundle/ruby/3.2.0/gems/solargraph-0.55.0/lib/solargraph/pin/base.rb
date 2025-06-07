@@ -1,0 +1,384 @@
+# frozen_string_literal: true
+
+module Solargraph
+  module Pin
+    # The base class for map pins.
+    #
+    class Base
+      include Common
+      include Conversions
+      include Documenting
+
+      # @return [YARD::CodeObjects::Base]
+      attr_reader :code_object
+
+      # @return [Solargraph::Location]
+      attr_reader :location
+
+      # @return [Solargraph::Location]
+      attr_reader :type_location
+
+      # @return [String]
+      attr_reader :name
+
+      # @return [String]
+      attr_reader :path
+
+      # @return [::Symbol]
+      attr_accessor :source
+
+      def presence_certain?
+        true
+      end
+
+      # @param location [Solargraph::Location, nil]
+      # @param type_location [Solargraph::Location, nil]
+      # @param closure [Solargraph::Pin::Closure, nil]
+      # @param name [String]
+      # @param comments [String]
+      def initialize location: nil, type_location: nil, closure: nil, source: nil, name: '', comments: ''
+        @location = location
+        @type_location = type_location
+        @closure = closure
+        @name = name
+        @source = source
+        @comments = comments
+        @source = source
+      end
+
+      # @return [String]
+      def comments
+        @comments ||= ''
+      end
+
+      # @param generics_to_resolve [Enumerable<String>]
+      # @param return_type_context [ComplexType, nil]
+      # @param context [ComplexType]
+      # @param resolved_generic_values [Hash{String => ComplexType}]
+      # @return [self]
+      def resolve_generics_from_context(generics_to_resolve, return_type_context = nil, resolved_generic_values: {})
+        proxy return_type.resolve_generics_from_context(generics_to_resolve,
+                                                        return_type_context,
+                                                        resolved_generic_values: resolved_generic_values)
+      end
+
+      # @yieldparam [ComplexType]
+      # @yieldreturn [ComplexType]
+      # @return [self]
+      def transform_types(&transform)
+        proxy return_type.transform(&transform)
+      end
+
+      # Determine the concrete type for each of the generic type
+      # parameters used in this method based on the parameters passed
+      # into the its class and return a new method pin.
+      #
+      # @param definitions [Pin::Namespace] The module/class which uses generic types
+      # @param context_type [ComplexType] The receiver type
+      # @return [self]
+      def resolve_generics definitions, context_type
+        transform_types { |t| t.resolve_generics(definitions, context_type) if t }
+      end
+
+      def all_rooted?
+        !return_type || return_type.all_rooted?
+      end
+
+      # @param generics_to_erase [::Array<String>]
+      # @return [self]
+      def erase_generics(generics_to_erase)
+        return self if generics_to_erase.empty?
+        transform_types { |t| t.erase_generics(generics_to_erase) }
+      end
+
+      # @return [String, nil]
+      def filename
+        return nil if location.nil?
+        location.filename
+      end
+
+      # @return [Integer]
+      def completion_item_kind
+        LanguageServer::CompletionItemKinds::KEYWORD
+      end
+
+      # @return [Integer, nil]
+      def symbol_kind
+        nil
+      end
+
+      def to_s
+        desc
+      end
+
+      # @return [Boolean]
+      def variable?
+        false
+      end
+
+      # @return [Location, nil]
+      def best_location
+        location || type_location
+      end
+
+      # True if the specified pin is a near match to this one. A near match
+      # indicates that the pins contain mostly the same data. Any differences
+      # between them should not have an impact on the API surface.
+      #
+      # @param other [Solargraph::Pin::Base, Object]
+      # @return [Boolean]
+      def nearly? other
+        self.class == other.class &&
+          name == other.name &&
+          (closure == other.closure || (closure && closure.nearly?(other.closure))) &&
+          (comments == other.comments ||
+            (((maybe_directives? == false && other.maybe_directives? == false) || compare_directives(directives, other.directives)) &&
+            compare_docstring_tags(docstring, other.docstring))
+          )
+      end
+
+      # Pin equality is determined using the #nearly? method and also
+      # requiring both pins to have the same location.
+      #
+      def == other
+        return false unless nearly? other
+        comments == other.comments && location == other.location
+      end
+
+      # The pin's return type.
+      #
+      # @return [ComplexType]
+      def return_type
+        @return_type ||= ComplexType::UNDEFINED
+      end
+
+      # @return [YARD::Docstring]
+      def docstring
+        parse_comments unless defined?(@docstring)
+        @docstring ||= Solargraph::Source.parse_docstring('').to_docstring
+      end
+
+      # @return [::Array<YARD::Tags::Directive>]
+      def directives
+        parse_comments unless defined?(@directives)
+        @directives
+      end
+
+      # @return [::Array<YARD::Tags::MacroDirective>]
+      def macros
+        @macros ||= collect_macros
+      end
+
+      # Perform a quick check to see if this pin possibly includes YARD
+      # directives. This method does not require parsing the comments.
+      #
+      # After the comments have been parsed, this method will return false if
+      # no directives were found, regardless of whether it previously appeared
+      # possible.
+      #
+      # @return [Boolean]
+      def maybe_directives?
+        return !@directives.empty? if defined?(@directives)
+        @maybe_directives ||= comments.include?('@!')
+      end
+
+      # @return [Boolean]
+      def deprecated?
+        @deprecated ||= docstring.has_tag?('deprecated')
+      end
+
+      # Get a fully qualified type from the pin's return type.
+      #
+      # The relative type is determined from YARD documentation (@return,
+      # @param, @type, etc.) and its namespaces are fully qualified using the
+      # provided ApiMap.
+      #
+      # @param api_map [ApiMap]
+      # @return [ComplexType]
+      def typify api_map
+        return_type.qualify(api_map, namespace)
+      end
+
+      # Infer the pin's return type via static code analysis.
+      #
+      # @param api_map [ApiMap]
+      # @return [ComplexType]
+      def probe api_map
+        typify api_map
+      end
+
+      # @deprecated Use #typify and/or #probe instead
+      # @param api_map [ApiMap]
+      # @return [ComplexType]
+      def infer api_map
+        Solargraph::Logging.logger.warn "WARNING: Pin #infer methods are deprecated. Use #typify or #probe instead."
+        type = typify(api_map)
+        return type unless type.undefined?
+        probe api_map
+      end
+
+      # Try to merge data from another pin. Merges are only possible if the
+      # pins are near matches (see the #nearly? method). The changes should
+      # not have any side effects on the API surface.
+      #
+      # @param pin [Pin::Base] The pin to merge into this one
+      # @return [Boolean] True if the pins were merged
+      def try_merge! pin
+        return false unless nearly?(pin)
+        @location = pin.location
+        @closure = pin.closure
+        return true if comments == pin.comments
+        @comments = pin.comments
+        @docstring = pin.docstring
+        @return_type = pin.return_type
+        @documentation = nil
+        @deprecated = nil
+        reset_conversions
+        true
+      end
+
+      def proxied?
+        @proxied ||= false
+      end
+
+      def probed?
+        @probed ||= false
+      end
+
+      # @param api_map [ApiMap]
+      # @return [self]
+      def realize api_map
+        return self if return_type.defined?
+        type = typify(api_map)
+        return proxy(type) if type.defined?
+        type = probe(api_map)
+        return self if type.undefined?
+        result = proxy(type)
+        result.probed = true
+        result
+      end
+
+      # Return a proxy for this pin with the specified return type. Other than
+      # the return type and the #proxied? setting, the proxy should be a clone
+      # of the original.
+      #
+      # @param return_type [ComplexType]
+      # @return [self]
+      def proxy return_type
+        result = dup
+        result.return_type = return_type
+        result.proxied = true
+        result
+      end
+
+      # @deprecated
+      # @return [String]
+      def identity
+        @identity ||= "#{closure&.path}|#{name}|#{location}"
+      end
+
+      # @return [String, nil]
+      def to_rbs
+        return_type.to_rbs
+      end
+
+      # @return [String]
+      def type_desc
+        rbs = to_rbs
+        # RBS doesn't have a way to represent a Class<x> type
+        rbs = return_type.rooted_tags if return_type.name == 'Class'
+        if path
+          if rbs
+            path + ' ' + rbs
+          else
+            path
+          end
+        else
+          rbs
+        end
+      end
+
+      # @return [String]
+      def desc
+        closure_info = closure&.desc
+        binder_info = binder&.desc
+        "[name=#{name.inspect} return_type=#{type_desc}, context=#{context.rooted_tags}, closure=#{closure_info}, binder=#{binder_info}]"
+      end
+
+      def inspect
+        "#<#{self.class} `#{self.desc}` at #{self.location.inspect}>"
+      end
+
+      protected
+
+      # @return [Boolean]
+      attr_writer :probed
+
+      # @return [Boolean]
+      attr_writer :proxied
+
+      # @return [ComplexType]
+      attr_writer :return_type
+
+      private
+
+      # @return [void]
+      def parse_comments
+        # HACK: Avoid a NoMethodError on nil with empty overload tags
+        if comments.nil? || comments.empty? || comments.strip.end_with?('@overload')
+          @docstring = nil
+          @directives = []
+        else
+          # HACK: Pass a dummy code object to the parser for plugins that
+          # expect it not to be nil
+          parse = Solargraph::Source.parse_docstring(comments)
+          @docstring = parse.to_docstring
+          @directives = parse.directives
+        end
+      end
+
+      # True if two docstrings have the same tags, regardless of any other
+      # differences.
+      #
+      # @param d1 [YARD::Docstring]
+      # @param d2 [YARD::Docstring]
+      # @return [Boolean]
+      def compare_docstring_tags d1, d2
+        return false if d1.tags.length != d2.tags.length
+        d1.tags.each_index do |i|
+          return false unless compare_tags(d1.tags[i], d2.tags[i])
+        end
+        true
+      end
+
+      # @param dir1 [::Array<YARD::Tags::Directive>]
+      # @param dir2 [::Array<YARD::Tags::Directive>]
+      # @return [Boolean]
+      def compare_directives dir1, dir2
+        return false if dir1.length != dir2.length
+        dir1.each_index do |i|
+          return false unless compare_tags(dir1[i].tag, dir2[i].tag)
+        end
+        true
+      end
+
+      # @param tag1 [YARD::Tags::Tag]
+      # @param tag2 [YARD::Tags::Tag]
+      # @return [Boolean]
+      def compare_tags tag1, tag2
+        tag1.class == tag2.class &&
+          tag1.tag_name == tag2.tag_name &&
+          tag1.text == tag2.text &&
+          tag1.name == tag2.name &&
+          tag1.types == tag2.types
+      end
+
+      # @return [::Array<YARD::Tags::Handlers::Directive>]
+      def collect_macros
+        return [] unless maybe_directives?
+        parse = Solargraph::Source.parse_docstring(comments)
+        parse.directives.select{ |d| d.tag.tag_name == 'macro' }
+      end
+    end
+  end
+end

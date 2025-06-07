@@ -1,0 +1,8 @@
+include:
+  - app/**/*.rb
+  - lib/**/*.rb
+exclude:
+  - node_modules
+  - vendor
+  - log
+  - tmp

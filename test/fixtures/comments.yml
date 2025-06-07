@@ -1,6 +1,6 @@
 one:
-  user: one    # user_id の代わりにラベル参照でOK
-  coffee: one  # coffee_id の代わりにラベル参照でOK
+  user: one    
+  coffee: one  
   content: "MyText"
 
 two:

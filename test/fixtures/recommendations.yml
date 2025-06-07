@@ -1,9 +1,9 @@
 one:
-  user_id: one
-  coffee_id: one
+  user: one        # ここはuser_idではなくuserという関連名を使う
+  coffee: one
   reason: "Great taste"
 
 two:
-  user_id: two
-  coffee_id: two
+  user: two
+  coffee: two
   reason: "Nice aroma"

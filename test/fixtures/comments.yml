@@ -1,10 +1,9 @@
-# comments.yml
 one:
-  user: one
-  coffee: one
+  user: one       # users.ymlのoneを参照
+  recommendation: one   # recommendations.ymlのoneを参照
   content: "MyText"
 
 two:
   user: two
-  coffee: two
+  recommendation: two
   content: "MyText"

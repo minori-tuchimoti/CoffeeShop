@@ -1,4 +1,4 @@
-class CoffeeshopsController < ApplicationController
+class CoffeesController < ApplicationController
   def index      # 日本地図上に喫茶店一覧をマッピング（Google MapsやMapboxを使う）
   end
 

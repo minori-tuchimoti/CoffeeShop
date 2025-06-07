@@ -2,10 +2,10 @@
 
 one:
   user: one
-  coffeeshop: one
+  coffee: one
   content: MyText
 
 two:
   user: two
-  coffeeshop: two
+  coffee: two
   content: MyText

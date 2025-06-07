@@ -10,8 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_06_06_074156) do
-  create_table "coffeeshops", force: :cascade do |t|
+ActiveRecord::Schema[7.2].define(version: 2025_06_07_143628) do
+  create_table "coffees", force: :cascade do |t|
     t.string "name"
     t.text "description"
     t.string "address"
@@ -24,21 +24,21 @@ ActiveRecord::Schema[7.2].define(version: 2025_06_06_074156) do
 
   create_table "comments", force: :cascade do |t|
     t.integer "user_id", null: false
-    t.integer "coffeeshop_id", null: false
+    t.integer "coffee_id", null: false
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["coffeeshop_id"], name: "index_comments_on_coffeeshop_id"
+    t.index ["coffee_id"], name: "index_comments_on_coffee_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "recommendations", force: :cascade do |t|
     t.integer "user_id", null: false
-    t.integer "coffeeshop_id", null: false
+    t.integer "coffee_id", null: false
     t.text "reason"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["coffeeshop_id"], name: "index_recommendations_on_coffeeshop_id"
+    t.index ["coffee_id"], name: "index_recommendations_on_coffee_id"
     t.index ["user_id"], name: "index_recommendations_on_user_id"
   end
 
@@ -55,8 +55,8 @@ ActiveRecord::Schema[7.2].define(version: 2025_06_06_074156) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "comments", "coffeeshops"
+  add_foreign_key "comments", "coffees"
   add_foreign_key "comments", "users"
-  add_foreign_key "recommendations", "coffeeshops"
+  add_foreign_key "recommendations", "coffees"
   add_foreign_key "recommendations", "users"
 end

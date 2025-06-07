@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get "users/index"
+  get "users/show"
   devise_for :users
   root "homes#top" # トップページ
   get "about", to: "homes#about" # /about にアクセスできるようにする
@@ -15,10 +17,10 @@ Rails.application.routes.draw do
   get "recommendations/destroy"
   get "comments/create"
   get "comments/destroy"
-  get "coffeeshops/index"
-  get "coffeeshops/show"
-  get "coffeeshops/new"
-  get "coffeeshops/edit"
+  get "coffees/index"
+  get "coffees/show"
+  get "coffees/new"
+  get "coffees/edit"
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

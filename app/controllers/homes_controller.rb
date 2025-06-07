@@ -1,4 +1,4 @@
-class HomesController < ApplicationController     #アプリのTOP画面、紹介画面
+class HomesController < ApplicationController     # アプリのTOP画面、紹介画面
   def top
   end
 

@@ -63,4 +63,4 @@ gem "devise"
 
 gem "rubyzip", "~> 2.3"
 
-gem 'solargraph'
+gem "solargraph"

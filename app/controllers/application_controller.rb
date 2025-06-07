@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
 
-  
+
   def after_sign_in_path_for(resource)
     about_path
   end
@@ -12,17 +12,16 @@ class ApplicationController < ActionController::Base
   def after_sign_out_path_for(resource)
     about_path
   end
-  
+
   protected
 
 
   def after_sign_out_path_for(resource_or_scope)
     homes_top_path  # ここでhomes#topのルートヘルパーを指定
   end
-  
+
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
-    devise_parameter_sanitizer.permit(:account_update, keys: [:name])  # ← これを追加
+    devise_parameter_sanitizer.permit(:sign_up, keys: [ :name ])
+    devise_parameter_sanitizer.permit(:account_update, keys: [ :name ])  # ← これを追加
   end
 end
-

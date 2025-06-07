@@ -15,7 +15,7 @@ module ActiveSupport
     setup do
       User.all.each do |user|
         if user.encrypted_password.blank?
-          user.password = 'password'
+          user.password = "password"
           user.save!
         end
       end

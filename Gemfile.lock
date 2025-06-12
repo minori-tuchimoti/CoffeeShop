@@ -379,7 +379,7 @@ DEPENDENCIES
   selenium-webdriver
   solargraph
   sprockets-rails
-  sqlite3 (~> 1.6)
+  sqlite3 (~> 1.7)
   stimulus-rails
   turbo-rails
   tzinfo-data

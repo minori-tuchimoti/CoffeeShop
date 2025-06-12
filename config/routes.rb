@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :users
   resources :coffees
 
-  delete '/logout' => 'users#logout'
+  delete "/logout" => "users#logout"
 
   get "homes/top"
   get "homes/about"

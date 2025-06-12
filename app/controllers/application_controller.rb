@@ -6,19 +6,17 @@ class ApplicationController < ActionController::Base
 
 
   def after_sign_in_path_for(resource)
-    about_path
-  end
-
-  def after_sign_out_path_for(resource)
-    about_path
+    coffees_path   # 新規登録、ログイン後coffees/indexへ
   end
 
   protected
 
 
-  def after_sign_out_path_for(resource_or_scope)
-    homes_top_path  # ここでhomes#topのルートヘルパーを指定
+   
+  def after_sign_out_path_for(resource)
+    about_path
   end
+
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [ :name ])
